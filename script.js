@@ -77,13 +77,13 @@ setLocalStorageInfo('user', person);
 */
 
 function getLocalStorageInfo(key) {
-  // code here
+ return setLocalStorageInfo = localStorage.getItem(key);
 }
 
-// console.log(getLocalStorageInfo('language')); // en
-// console.log(getLocalStorageInfo('userNames')); // ['Oleksii', 'Oleksandr', 'Anna', 'Dmytro']
-// console.log(getLocalStorageInfo('user')); // обʼєкт персони John Wick поданий вище по коду
-// console.log(getLocalStorageInfo('nonExistentVariable')); // undefined
+console.log(getLocalStorageInfo('language')); // en
+console.log(getLocalStorageInfo('userNames')); // ['Oleksii', 'Oleksandr', 'Anna', 'Dmytro']
+console.log(getLocalStorageInfo('user')); // обʼєкт персони John Wick поданий вище по коду
+console.log(getLocalStorageInfo('nonExistentVariable')); // undefined
 //
 
 // export { createDomElement, setLocalStorageInfo, getLocalStorageInfo }
