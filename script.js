@@ -17,15 +17,18 @@
  */
 
 function createDomElement(tagName, textContent, container) {
-  return document.querySelector(tagName)
-
+      const element = document.createElement(tagName);
+     element.innerText = textContent;
+       document.getElementById(container)
+    container.appendChild(element);
+      return element;
 }
 
 // Демонстрація використання функції
-// const container = document.body; // В якості прикладу використовуємо body як контейнер
-// const createdElement = createDomElement('p', 'This paragraph has been added to the specified container.', container);
-// console.log(createdElement);
-// console.log(createDomElement('span', 'This span has been added to the paragraph.', createdElement))
+const container = document.body; // В якості прикладу використовуємо body як контейнер
+const createdElement = createDomElement('p', 'This paragraph has been added to the specified container.', container);
+console.log(createdElement);
+console.log(createDomElement('span', 'This span has been added to the paragraph.', createdElement))
 
 /*
  * #2 Розробити функцію setLocalStorageInfo, яка встановлює LocalStorage змінну з корисною інформацією
@@ -82,4 +85,4 @@ function getLocalStorageInfo(key) {
 // console.log(getLocalStorageInfo('nonExistentVariable')); // undefined
 //
 
-export { createDomElement, setLocalStorageInfo, getLocalStorageInfo }
+// export { createDomElement, setLocalStorageInfo, getLocalStorageInfo }
