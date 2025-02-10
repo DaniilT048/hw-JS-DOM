@@ -59,9 +59,9 @@ const person = {
 }
 
  // Демонстрація використання функції
- console.log(setLocalStorageInfo('language', 'en'));
- console.log(setLocalStorageInfo('userNames', userNames, 30));
- console.log(setLocalStorageInfo('user', person));
+setLocalStorageInfo('language', 'en');
+setLocalStorageInfo('userNames', userNames, 30);
+setLocalStorageInfo('user', person);
 
 /*
 * #3
