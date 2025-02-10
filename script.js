@@ -46,7 +46,8 @@ console.log(createDomElement('span', 'This span has been added to the paragraph.
  */
 
 function setLocalStorageInfo(key, value, timeout) {
-  // code here
+   localStorage.setItem(key, JSON.stringify(value), timeout);
+  return localStorage.getItem(key)
 }
 
 const userNames = ['Oleksii', 'Oleksandr', 'Anna', 'Dmytro'];
@@ -57,10 +58,10 @@ const person = {
   password: 'password@example.com',
 }
 
-// Демонстрація використання функції
-// setLocalStorageInfo('language', 'en');
-// setLocalStorageInfo('userNames', userNames, 30);
-// setLocalStorageInfo('user', person);
+ // Демонстрація використання функції
+ console.log(setLocalStorageInfo('language', 'en'));
+ console.log(setLocalStorageInfo('userNames', userNames, 30));
+ console.log(setLocalStorageInfo('user', person));
 
 /*
 * #3
