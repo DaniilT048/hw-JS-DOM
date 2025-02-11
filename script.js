@@ -17,11 +17,11 @@
  */
 
 function createDomElement(tagName, textContent, container) {
-      const element = document.createElement(tagName);
-     element.innerText = textContent;
-       document.getElementById(container)
+    const element = document.createElement(tagName);
+    element.innerText = textContent;
+
     container.appendChild(element);
-      return element;
+    return element;
 }
 
 // Демонстрація використання функції
@@ -46,19 +46,18 @@ console.log(createDomElement('span', 'This span has been added to the paragraph.
  */
 
 function setLocalStorageInfo(key, value, timeout) {
-   localStorage.setItem(key, JSON.stringify(value), timeout);
-  return localStorage.getItem(key)
+    localStorage.setItem(key, JSON.stringify(value), timeout);
 }
 
 const userNames = ['Oleksii', 'Oleksandr', 'Anna', 'Dmytro'];
 
 const person = {
-  name: 'John Wick',
-  email: 'john@example.com',
-  password: 'password@example.com',
+    name: 'John Wick',
+    email: 'john@example.com',
+    password: 'password@example.com',
 }
 
- // Демонстрація використання функції
+// Демонстрація використання функції
 setLocalStorageInfo('language', 'en');
 setLocalStorageInfo('userNames', userNames, 30);
 setLocalStorageInfo('user', person);
@@ -77,7 +76,7 @@ setLocalStorageInfo('user', person);
 */
 
 function getLocalStorageInfo(key) {
- return setLocalStorageInfo = localStorage.getItem(key);
+    return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : undefined;
 }
 
 console.log(getLocalStorageInfo('language')); // en
